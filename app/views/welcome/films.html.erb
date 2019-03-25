@@ -4,23 +4,22 @@
 </p>
 
 
-
-<h2>Films</h2>
+<h2>Films </h2>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Year</th>
     <th>Episode</th>
+    <th>Name</th>
+    <th>Release Date</th>
     <th>Director</th>
     <th>Producers</th>
   </tr>
 
   <% @films.each do |film| %>
   <tr>
-    <td>   <%= film['title'] %> </td>
+    <td>   <%= film['episode_id'] %> </td>
+    <td>   <%= button_to film['title'], welcome_path, method: :get, params: {film_url: film['url']} %> </td>
     <td>   <%= film['release_date'] %> </td>
-    <td>   <%= film['episode'] %> </td>
     <td>   <%= film['director'] %> </td>
     <td>   <%= film['producer'] %> </td>
   </tr>
