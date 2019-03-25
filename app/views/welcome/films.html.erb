@@ -1,0 +1,30 @@
+<h2>My Star Wars Api</h2>
+<p>
+  Tarea 1 - Taller de Integracion
+</p>
+
+
+
+<h2>Films</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Year</th>
+    <th>Episode</th>
+    <th>Director</th>
+    <th>Producers</th>
+  </tr>
+
+  <% @films.each do |film| %>
+  <tr>
+    <td>   <%= film['title'] %> </td>
+    <td>   <%= film['release_date'] %> </td>
+    <td>   <%= film['episode'] %> </td>
+    <td>   <%= film['director'] %> </td>
+    <td>   <%= film['producer'] %> </td>
+  </tr>
+
+  <% end %>
+
+</table>
